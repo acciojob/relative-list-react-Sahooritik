@@ -1,14 +1,16 @@
 import React from 'react'
 
 const App = () => {
+  let arr = ['pappu','chhotu','bantu','sullu','tillu','lillu']
   return (
     <div id="main">
-        <ul>
-          <li key='1'>Bade Bhaiya</li>
-          <li key='2'>Chhote Bhaiya</li>
-          <li key='3'>Badi didi</li>
-          <li key='4'>Chhoti didi</li>
-        </ul>
+        <ol key="relativelist">
+          {
+            arr.map((value,index)=>{
+              return <li key={`relativeListItem${index+1}`}>{value}</li>
+            })
+          }
+        </ol>
                {/* Do not remove the main div */}
     </div>
   )
